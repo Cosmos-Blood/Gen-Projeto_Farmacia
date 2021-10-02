@@ -8,6 +8,6 @@ package com.gen.farmacia.controller;
 5 - putCategoria = endPoint com a função de atualizar dados de uma categoria (testar o MÉTODO put no postman);
 6 - deleteCategoria = endPoint com a função de apagar uma categoria do banco de dados (testar o MÉTODO delete no postman).*/
 
-public class CategoriaController {
+public class ProdutoController {
 
 }
