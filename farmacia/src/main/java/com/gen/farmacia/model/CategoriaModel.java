@@ -32,4 +32,15 @@ public class CategoriaModel {
 		this.nomeCategoria = nomeCategoria;
 	}
 
+	@OneToMany(mappedBy = "nomeCategoria", cascade = CascadeType.REMOVE)
+	@JsonIgnoreProperties({"nomeCategoria"})
+	private List<CategoriaModel> categoria = new ArrayList<>();
+
+	public List<CategoriaModel> getCategoria() {
+		return categoria;
+	}
+
+	public void setCategoria(List<CategoriaModel> categoria) {
+		this.categoria = categoria;
+	}
 }

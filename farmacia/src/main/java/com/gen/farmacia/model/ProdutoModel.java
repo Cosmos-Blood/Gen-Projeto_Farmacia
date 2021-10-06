@@ -40,4 +40,16 @@ public class ProdutoModel {
 		this.nomeProduto = nomeProduto;
 	}
 
+	@OneToMany(mappedBy = "nomeProduto", cascade = CascadeType.REMOVE)
+	@JsonIgnoreProperties({"nomeProduto"})
+	private List<ProdutoModel> produto = new ArrayList<>();
+
+	public List<ProdutoModel> getProduto() {
+		return produto;
+	}
+
+	public void setProduto(List<ProdutoModel> produto) {
+		this.produto = produto;
+	}
+
 }
